@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 21:42:29 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/09/06 21:21:22 by mmakboub         ###   ########.fr       */
+/*   Created: 2022/09/06 22:03:47 by mmakboub          #+#    #+#             */
+/*   Updated: 2022/09/06 22:08:55 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+unsigned char	reverse_bits(unsigned char octet)
 {
-	int i = 0;
-	while(str[i])
-		i++;
-	return(i);
-}
- char    *ft_strrev(char *str)
- {
-	int i= 0;
-	int len = ft_strlen(str);
-	while(len > i);
+	int i = 8;
+	unsigned char bit;
+	while(i > 0)
 	{
-		char tmp = str[i];
-		str[len] = str[i];
-		str[len] = tmp;
-		i++;
-		len--;
+		bit = bit * 2 + octet % 2;
+		octet /= 2;
+		i--;
 	}
-	return(str);
- }
+	return(bit);
+}

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmakboub <mmakboub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 21:42:29 by mmakboub          #+#    #+#             */
-/*   Updated: 2022/09/06 21:21:22 by mmakboub         ###   ########.fr       */
+/*   Created: 2022/09/06 21:35:54 by mmakboub          #+#    #+#             */
+/*   Updated: 2022/09/06 21:42:31 by mmakboub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+#include<stdlib.h>
+
+char	*ft_strpbrk(const char *s1, const char *s2)
 {
 	int i = 0;
-	while(str[i])
-		i++;
-	return(i);
-}
- char    *ft_strrev(char *str)
- {
-	int i= 0;
-	int len = ft_strlen(str);
-	while(len > i);
+	int j;
+	if(!s1[i] || !s2[i])
+		return(NULL);
+	while(s1[i])
 	{
-		char tmp = str[i];
-		str[len] = str[i];
-		str[len] = tmp;
+		j = 0;
+		while(s2[j])
+		{
+			if(s1[i] == s2[j])
+				return ((char)*s1);
+			j++;
+		}
 		i++;
-		len--;
 	}
-	return(str);
- }
+	return(NULL);
+}
