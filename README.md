@@ -4,27 +4,16 @@ this repository is maded in order to help u to prerpare for ur exam rank 2 , so 
 # FOR THE FISRT LEVEL
 
 	* First_word
-
 	* Fizzbuz
-
 	* ft_strcpy
-
 	* Ft_strlen
-
 	* Ft_swap
-
 	* ulstr
-
 	* Search_and_replace
-
 	* rot_13
-
 	* rot_1
-
 	* rev_print
-
 	* repeat_alpha
-
 	* putstr
 
 # FOR THE SECOND LEVEL
